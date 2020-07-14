@@ -1,12 +1,35 @@
+<?php
+require 'function.php';
+
+if( isset($_POST["daftar"]) ) {
+
+    if(daftar($_POST)> 0 ) {
+        echo "<script>
+                alert('user baru berhasil ditambahkan')
+        </script>";
+
+    } else {
+
+        echo mysqli_eror($conn);
+    }
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Halaman Registrasi</title>
+    <style>
+        label {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <h1>oke</h1>
+    <h1>Halaman Registrasi</h1>
+    
 
       <form action="" method="post">
         <ul>
